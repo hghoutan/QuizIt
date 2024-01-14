@@ -10,15 +10,16 @@ export class SearchFlashcardComponent  {
   constructor(){}
   categories : String[] = getQuizCategories()
   sweetColors: string[] = [
-    "#FFD700", // Gold
-    "#FF69B4", // HotPink
-    "#87CEEB", // SkyBlue
-    "#8A2BE2", // BlueViolet
-    "#00FF00", // Lime
-    "#9932CC", // DarkOrchid
-    "#FF6347", // Tomato
-    "#008080", // Teal
-    "#FF4500", // OrangeRed
-    "#4169E1", // RoyalBlue
+    "#8892BF", // Gold
+    "#F29C9F", // HotPink
+    "#8CC84B", // SkyBlue
+    "#F7CE5B", // BlueViolet
+    "#3794CC", // Lime
+    "#E44D26", // DarkOrchid
+    "#5E738B", // Tomato
+    "#21759B", // Teal
+    "#000000", // OrangeRed
+    "#F29559", 
+    "#326CE5",// RoyalBlue
   ];
 }

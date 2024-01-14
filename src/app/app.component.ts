@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
-import { Difficulty } from './Models/enums/difficulty.enum';
 import { QuizCategory } from './Models/enums/quiz-category.enum';
 import { Question } from './Models/question.model';
 import { GenerateQuizService } from './Services/generate-quiz.service';

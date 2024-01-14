@@ -1,23 +1,15 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from './Components/Home/home-page/home-page.component';
-import { AllQuizzesComponent } from './Components/All-quizzes/all-quizzes.component';
-import { SearchFlashcardComponent } from './Components/Search-flashcard/search-flashcard.component';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-  {path:'Home', component:HomePageComponent},
-  {path:'Search', component:SearchFlashcardComponent},
-  {path:'All-quizzes', component:AllQuizzesComponent},
-  {path:'', redirectTo:'Home', pathMatch:'full'},
-  {path:'**',redirectTo:'Home'},
-  
-
+  { path: '', loadChildren: () => import('./Pages/home-page/home.module').then(m => m.HomeModule) },
+  { path: '**', loadChildren: () => import('./Pages/four0four/four0four.module').then(m => m.Four0fourModule) },
   
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
